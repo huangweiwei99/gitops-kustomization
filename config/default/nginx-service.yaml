@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: demo-project
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  annotations:
+    tag: gitops
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
