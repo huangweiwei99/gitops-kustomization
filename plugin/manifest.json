@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Open Podcasts",
+  "description": "Open Podcasts",
+  "version": "0.0.1",
+  "homepage_url": "https://github.com/opensource-f2f/open-podcasts",
+  "permissions": [
+    "unlimitedStorage",
+    "notifications",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ximalaya.com/album/*"],
+      "run_at": "document_idle",
+      "js": ["ximalaya.js"]
+    }
+  ]
+}
